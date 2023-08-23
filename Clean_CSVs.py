@@ -49,5 +49,5 @@ for serial_number, group in grouped_data:
     # Guardar los datos del grupo en el archivo CSV
     group.to_csv(output_file, index=False)
 
-print("Archivos CSV creados y guardados exitosamente.")
+print("Archivos CSV, según número de serie, creados y guardados exitosamente.")
 
