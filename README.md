@@ -3,7 +3,9 @@
 **Recursos**:
 - Script de almacenamiento de ubicaciones: https://github.com/fjxmlzn/FindMyHistory
 - Script de síntesis y órden de datos: https://github.com/akka-cod/CSV_works/blob/main/Clean_CSVs.py
-- Script de sincronización de datos: 
+- Script de sincronización de datos:
+- Tmux: [Github - Tmux](https://github.com/tmux/tmux/wiki)
+- Crontab: Crontab Guru - https://crontab.guru/
 
 **Instrucciones para ejecutar el seguimiento**:
 - **Sistema**:
@@ -11,7 +13,11 @@
         - Ajustes > Privacidad > Acceso total al disco > Añadir terminal
     - Sincronización con iCloud: Total
     - Activar crontab para ejecución automática del Script de Sincronización de datos.
-    - Activar Tmux para activación de procesos de terminal en segundo plano.
+        - Abrimos terminal
+        - contrab -u usuario	[usuario es nombre del usuario]
+        - Agregaremos las tareas al archivo creado, desde la ventana que se habrá abierto al ejecutar el comando anterior.
+            - Ej: 0 10 * * * /ruta/al/script	[esto ejecutará el script de la ruta cada día de cada mes a las 10:00 am]
+    - Activar Tmux para activación de procesos de terminal en segundo plano. [opcional]
 - **Buscar o Find My**:
     - Abrimos la aplicación y la dejamos corriendo “ad infinitum”
     - La información de esta aplicación la podemos encontrar en la ruta: 
