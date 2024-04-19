@@ -34,8 +34,9 @@
         - En la carpeta del script: “ordenador” > “Macintosh HD” > "User" > FindMyHistory > log
         - Aquí tendremos una carpeta por cada día de registro
             - Dentro, tendremos un archivo csv por cada dispositivo con nuevas ubicaciones.
-- **Sincronización de datos**:
+- **Sincronización de datos y mapeo**:
     - En principio, se programará la ejecución del Script de sincronización de datos para cada día subir al servidor los datos del día anterior.
+    - No utilizamos los scripts de mapeo de este repositorio. De ésto se encarga Databay.
 - **Tratamiento de datos en servidor**:
     - En caso de necesitar la síntesis y ordenado de múltiples archivos csv de múltiples dispositivos y de múltiples días, disponemos del Script de síntesis y órden de datos: [https://github.com/akka-cod/CSV_works/blob/main/Clean_CSVs.py]
 
@@ -73,8 +74,9 @@
         - In the script folder: “Computer” > “Macintosh HD” > "User" > FindMyHistory > log
         - Here we will have a folder for each day of registration
             - Inside, we will have a csv file for each device with new locations.
-- **Data synchronization**:
+- **Data synchronization and Mapping**:
     - In principle, the execution of the Data Synchronization Script will be scheduled for each day to upload the previous day's data to the server.
+    - We do not use the mapping scripts from this repository. This is what Databay takes care of.
 - **Server-side data processing**:
     - In case you need the synthesis and sorting of multiple csv files from multiple devices and multiple days, we have the Synthesis and Data Order Script: [https://github.com/akka-cod/CSV_works/blob/main/Clean_CSVs.py]
  
