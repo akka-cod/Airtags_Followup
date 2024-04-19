@@ -36,7 +36,7 @@
             - Dentro, tendremos un archivo csv por cada dispositivo con nuevas ubicaciones.
 - **Sincronización de datos y mapeo**:
     - En principio, se programará la ejecución del Script de sincronización de datos para cada día subir al servidor los datos del día anterior.
-    - No utilizamos los scripts de mapeo de este repositorio. De ésto se encarga Databay.
+    - Databay se encarga del mapeo y crear la interfaz de visualización de las ubicaciones.
 - **Tratamiento de datos en servidor**:
     - En caso de necesitar la síntesis y ordenado de múltiples archivos csv de múltiples dispositivos y de múltiples días, disponemos del Script de síntesis y órden de datos: [https://github.com/akka-cod/CSV_works/blob/main/Clean_CSVs.py]
 
@@ -76,7 +76,7 @@
             - Inside, we will have a csv file for each device with new locations.
 - **Data synchronization and Mapping**:
     - In principle, the execution of the Data Synchronization Script will be scheduled for each day to upload the previous day's data to the server.
-    - We do not use the mapping scripts from this repository. This is what Databay takes care of.
+    - Databay takes care of the mapping and creating the visualization interface of the locations.
 - **Server-side data processing**:
     - In case you need the synthesis and sorting of multiple csv files from multiple devices and multiple days, we have the Synthesis and Data Order Script: [https://github.com/akka-cod/CSV_works/blob/main/Clean_CSVs.py]
  
