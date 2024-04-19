@@ -7,7 +7,7 @@
 **Recursos**:
 - Script de almacenamiento de ubicaciones: [https://github.com/fjxmlzn/FindMyHistory]
 - Script de síntesis y órden de datos: [https://github.com/akka-cod/CSV_works/blob/main/Clean_CSVs.py]
-- Script de sincronización de datos: Databay
+- Script de sincronización de datos y mapeo: Databay
 - Tmux: [Github - Tmux](https://github.com/tmux/tmux/wiki)
 - Crontab: Crontab Guru - [https://crontab.guru/]
 
@@ -46,7 +46,7 @@
 **Resources**:
 - Location Storage Script: [https://github.com/fjxmlzn/FindMyHistory]
 - Data Synthesis and Sorting Script: [https://github.com/akka-cod/CSV_works/blob/main/Clean_CSVs.py]
-- Data Synchronization Script: Databay
+- Data Synchronization Script and Mapping: Databay
 - Tmux: [Github - Tmux](https://github.com/tmux/tmux/wiki)
 - Crontab: Crontab Guru - [https://crontab.guru/]
 
