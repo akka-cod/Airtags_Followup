@@ -1,53 +1,53 @@
 import os
 import pandas as pd
 
-# Paso 1: Especificar la ruta donde se encuentran los archivos CSV
+# Step 1: Specify the path where the CSV files are located. Use your own route
 ruta_base = '/home/ak/Escritorio/Pyt/log'
 
-# Paso 2: Crear una lista para almacenar los DataFrames de cada archivo CSV
+# Step 2: Create a list to store the DataFrames of each CSV file
 dataframes_list = []
 
-# Paso 3: Recorrer cada subcarpeta y archivo CSV en la ruta base
+# Step 3: Cycle through each subfolder and CSV file in the base path
 for root, _, files in os.walk(ruta_base):
     for file in files:
         if file.endswith('.csv'):
             archivo_csv = os.path.join(root, file)
-            # Paso 4: Leer el archivo CSV
+            # Step 4: Read the CSV file
             data = pd.read_csv(archivo_csv)
-            # Paso 5: Agregar el DataFrame a la lista
+            # Step 5: Add the DataFrame to the list
             dataframes_list.append(data)
 
-# Paso 6: Concatenar todos los DataFrames en uno solo
+# Step 6: Concatenate all DataFrames into one
 all_data = pd.concat(dataframes_list)
 
-# Paso 7: Agrupar los datos por "SerialNumber"
+# Step 7: Group data by "SerialNumber"
 grouped_data = all_data.groupby('serialNumber')
 
-# Paso 8: Crear una lista para almacenar los DataFrames de cada grupo
+# Step 8: Create a list to store the DataFrames for each group
 grouped_data_list = []
 
-# Paso 9: Recorrer cada grupo y agregarlo a la lista
+# Step 9: Walk through each group and add it to the list
 for serial_number, group in grouped_data:
     grouped_data_list.append(group)
 
-# Paso 10: Concatenar nuevamente los DataFrames para tener todos los datos agrupados en uno solo
+# Step 10: Reconcatenate the DataFrames to have all the data grouped into one
 grouped_data_concatenated = pd.concat(grouped_data_list)
 
-# Paso 11: Ordenar las filas en función de los datos de la columna "location|timeStamp"
+# Step 11: Sort rows based on the data in the "location|timeStamp" column
 sorted_data = grouped_data_concatenated.sort_values(by='location|timeStamp')
 
-# Paso 12: Exportar los datos agrupados a un nuevo archivo CSV
+# Step 12: Export the grouped data to a new CSV file. Use your own route
 output_file = '/home/ak/Escritorio/Pyt/Exports/archivo_agrupado.csv'
 pd.concat(grouped_data_list).to_csv(output_file, index=False)
 
-print("Datos agrupados exportados exitosamente a:", output_file)
+print("Clustered data successfully exported to:", output_file)
 
-# Paso 13: Recorrer cada grupo y guardar los datos en archivos CSV separados
+# Step 13: Cycle through each group and save the data in separate CSV files
 for serial_number, group in grouped_data:
-    # Crear un nombre de archivo único basado en el serialNumber
+    # Create a unique file name based on the serialNumber. Use your own route
     output_file = f'/home/ak/Escritorio/Pyt/Exports/{serial_number}.csv'
-    # Guardar los datos del grupo en el archivo CSV
+    # Save the group's data to the CSV file
     group.to_csv(output_file, index=False)
 
-print("Archivos CSV, según número de serie, creados y guardados exitosamente.")
+print("CSV files, by serial number, successfully created and saved.")
 
